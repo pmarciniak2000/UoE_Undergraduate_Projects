@@ -1,5 +1,5 @@
 ### UoE_Undergraduate_Projects
-A collection of the numerous projects I completed in my time studying at the University Of Edinburgh
+A collection of some of the projects I completed in my time studying at the University Of Edinburgh (2018-2023)
 
 ## UG2:
 
@@ -23,21 +23,31 @@ Introductory course to machine learning that required using various different ma
 
 **Computer Security**
 
+CW2
+
+CW3
+
+Note: CW1 was formative and was self contained in wireshark
+
+**Operating Systems**
+
 CW1
 
 CW2
 
-**Operating Systems**
+CW3
 
 **Systems Design Project**
+
+Group project with the aim of designing an assistive robot. My team created a fuel pump robot in Webots and designed a Java Android Application to control the robot.
 
 ## UG4:
 
 **Introduction to Databases**
 
-CW1
+CW1 - Relational algebra queries
 
-CW2
+CW2 - SQL queries
 
 **Computer Communication and Networks**
 
@@ -49,19 +59,45 @@ CW1
 
 **Foundations of Natural Language Processing**
 
+CW1
+
+CW2
+
 **Software Testing**
+
+The coursework for this project required writing tests to find hidden bugs in a compiled jar file. We then had to implement additional features into the codebase and write tests for the additional functionality.
 
 ## UG5:
 
 **Blockchains and Distributed Ledgers**
 
+CW1
+
+CW2
+
+CW3
+
+CW4
+
 **Principles and Design of IoT Systems**
+
+Group project requiring desinging an app to interface witha Respeck motion sensor and then use machine learning algorithms for Human Activity Recogintion.
 
 **Advanced Database Systems**
 
 **Computer Graphics**
 
+CW1
+
+CW2
+
 **Text Technologies for Data Science**
+
+CW1
+
+CW2
+
+CW3
 
 
 
