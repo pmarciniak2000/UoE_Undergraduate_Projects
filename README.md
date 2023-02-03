@@ -15,11 +15,17 @@ This course required implementing a bicycle rental system in Java. The system he
 
 **Informatics Large Practical**
 
-This course re
+This course required implementing a drone that would fly over a geojson stored map and collect items in a specified positions. The drone algorithm had to be optimised such that it would use as little fuel as possible whilst navigating obstacles such as buildings, i.e. no-fly zones.
 
 **Introductory Applied Machine Learning**
 
+Introductory course to machine learning that required using various different machine learning algorithms.
+
 **Computer Security**
+
+CW1
+
+CW2
 
 **Operating Systems**
 
@@ -29,7 +35,17 @@ This course re
 
 **Introduction to Databases**
 
+CW1
+
+CW2
+
 **Computer Communication and Networks**
+
+CW1
+
+CW1
+
+CW1
 
 **Foundations of Natural Language Processing**
 
