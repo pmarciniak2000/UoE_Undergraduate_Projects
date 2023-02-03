@@ -9,7 +9,11 @@ This course required implementing a bicycle rental system in Java. The system he
 
 **Reasoning and Agents**
 
+Planning Coursework
+
 **Introduction to Algorithms and Data Structures**
+
+Travelling Salesman Problem
 
 ## UG3:
 
