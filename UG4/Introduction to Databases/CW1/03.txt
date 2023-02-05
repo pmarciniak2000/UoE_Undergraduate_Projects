@@ -1,0 +1,1 @@
+<P>[Album,Artist,Title,Length](Tracks)<D>(<P>[Album,Artist,Title,Length](<S>[Album=A& (L<Length)](<P>[A,L](<R>[Album->A,Length->L](Tracks))<X>(<P>[Album,Artist,Title,Length](Tracks)))))

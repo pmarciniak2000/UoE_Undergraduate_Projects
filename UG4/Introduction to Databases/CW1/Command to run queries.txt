@@ -1,0 +1,1 @@
+java -jar "C:\UNI_Programs\REAL\real-0.5.2.jar" -d "C:\Year4\IDB\testdb\schema.json" -q "$(cat C:\Users\wotja\Desktop\IDBCW1\01.txt)"

@@ -1,0 +1,1 @@
+<P>[Name](Artists)<D><P>[Name](<S>[Type='LIVE'&~Type='STUDIO'&~Type='COMPILATION'](<P>[Name,Country,Year,Type](<S>[Artist=Name](Albums<X>(<R>[Type->Type1](Artists))))))

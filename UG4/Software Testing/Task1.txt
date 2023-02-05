@@ -1,0 +1,192 @@
+package st;
+
+import static org.junit.Assert.*;
+
+import java.math.BigInteger;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+public class Task1_1_FunctionalTest {
+
+	private Parser parser;
+
+	/** Setup as required **/
+	@Before
+	public void setup() {
+		parser = new Parser();
+	}
+	
+	// Bug 1 -- empty shortcut
+	@Test
+	public void emptyShortcutExistsTest() {
+		parser.addOption(new Option("option", Type.INTEGER));
+		assert (!parser.shortcutExists(""));
+	}
+
+	// Bug 8 -- override same name shortcut exists
+	@Test
+	public void sameOptionNameOverrideTest() {
+		parser.addOption(new Option("option", Type.STRING), "o1");
+		parser.addOption(new Option("option", Type.INTEGER), "o2");
+		assert (parser.shortcutExists("o2"));
+	}
+
+	// Bug 16 -- null key and shortcut
+	@Test(expected = NullPointerException.class)
+	public void nullOptionAndShortcut() {
+		parser.addOption(new Option("option", Type.STRING), "");
+		//parser.parse("");
+		parser.getString(null);
+	}
+	
+	// Bug 2 -- getBoolean test
+	@Test
+	public void booleanOptionNumberTest() {
+		parser.addOption(new Option("option", Type.BOOLEAN), "o");
+		parser.parse("--option=0");
+		assertEquals(parser.getBoolean("option"), false);
+	}
+	
+	// Bug 5 -- getInteger test
+	@Test
+	public void checkNegativeIntegerInput(){
+		//try {
+			parser.addOption(new Option("option", Type.INTEGER), "o");
+			parser.parse("--option=-12");
+			parser.getInteger("option");
+		//}
+		//catch (Exception e) {
+		//	Assert.fail("Exception " + e);
+		//}
+	}
+
+	// Bug 7 -- getInteger test
+	@Test
+	public void IntegerAsString() {
+		parser.addOption(new Option("option", Type.STRING), "o");
+		parser.parse("--option=5");
+		assertEquals(parser.getInteger("option"), 5);
+	}
+	
+	// Bug 15 -- getInteger test
+	@Test
+	public void VeryLargeIntegerTest() {
+		parser.addOption(new Option("option", Type.STRING), "o");
+		parser.parse("--option=9999999999");
+		assertEquals(parser.getInteger("option"), 0); // value should be default 0 as input out of integer range
+	}
+
+	// Bug 3 -- getInteger test
+	@Test
+	public void LongBooleanInput() {
+		parser.addOption(new Option("option", Type.BOOLEAN), "o");
+		parser.parse("--option=VeryLongInputAsBoolean");
+		assertEquals(parser.getInteger("option"), 1);
+	}
+
+	// Bug 14 -- getString test
+	@Test
+	public void DoubleBackLashNewlineInputTest() {
+		parser.addOption(new Option("option", Type.STRING), "o");
+		parser.parse("--option=test\\n");
+		assertEquals(parser.getString("option"), "test\\n");
+	}
+
+	// Bug 10 -- getCharacter test
+	@Test
+	public void EmptyCharacterInputTest() {
+		parser.addOption(new Option("option", Type.STRING), "o");
+		parser.parse("--option=");
+		assertEquals(parser.getCharacter("option"), '\0');
+	}
+
+	// Bug 9 -- parse test
+	@Test
+	public void WhiteSpaceParseTest() {
+		parser.addOption(new Option("option", Type.STRING), "o");
+		assertEquals(parser.parse("  "), 0);
+	}
+
+	
+	// Bug 20 -- Too many miscallenous symbols affects assignment
+	@Test
+	public void doubleQuotesTest() {
+		parser.addOption(new Option("option", Type.STRING), "o");
+		parser.addOption(new Option("option2", Type.STRING), "o2");
+		parser.parse("-o '\"-o7'\" --option2 =test");
+		assertEquals(parser.getString("o"), "'\"-o7'\"");
+	}
+
+	// Bug 13 --use of single quotes and - affects following assignment
+	@Test
+	public void bugTest13() {
+		parser.addOption(new Option("option", Type.STRING), "o");
+		parser.addOption(new Option("option2", Type.STRING), "o2");
+		parser.parse("-o '-o=7' --option2 =test");
+		assertEquals(parser.getString("o2"), "");
+	}
+
+	// Bug 19 WIP
+	//@Test
+	//public void bugTest19() {
+	//	parser.addOption(new Option("option", Type.STRING), "o");
+	//	parser.addOption(new Option("option2", Type.STRING), "o2");
+	//	parser.parse("-o \"-o2\" -o2 =test");
+	//	assertEquals(parser.getString("o2"), "");
+	//}
+
+	// Bug 6 -- Option equals test
+	@Test
+	public void NotEqualsTest() {
+		Option opt1 = new Option("", Type.STRING);
+		Option opt2 = new Option("option", Type.STRING);
+		assert (!opt1.equals(opt2));
+	}
+
+	// Bug 4 -- long shortcut test
+	@Test
+	public void LongShortcutTest() {
+		parser.addOption(new Option("option", Type.STRING),
+				"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		assert (parser.shortcutExists("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
+	}
+
+	// Bug 17 -- long optionName test
+	//Note this also displays Bug 1 due to the lack of shortcut
+	@Test
+	public void LongOptionNameTestWithoutShortcut() {
+		parser.addOption(new Option("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", Type.STRING));
+		assert (parser.optionExists("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
+	}
+	
+	// Bug 18 -- input whitespace test
+	@Test
+	public void TripleWhiteSpaceReplaceTest() {
+		parser.addOption(new Option("opt1", Type.STRING), "o1");
+		parser.addOption(new Option("opt2", Type.STRING), "o2");
+		parser.parse("--opt1=OldText --opt2=OldText2");
+		parser.replace("opt1   opt2", "Old", "New");
+		assertEquals(parser.getString("opt1"), "NewText");
+	}
+
+	// Bug 12 -- 
+	@Test
+	public void shortcutReplaceTest() {
+		parser.addOption(new Option("opt1", Type.STRING), "o1");
+		parser.addOption(new Option("opt2", Type.STRING), "o2");
+		parser.parse("--opt1=OldText --opt2=OldText2");
+		parser.replace("-o1", "Old", "New");
+		assertEquals(parser.getString("opt1"), "NewText");
+	}
+	
+
+	// Bug 11 -- checks validity of option name
+	// this expects an exception as the # in the name is not a valid character in the name
+	@Test(expected = IllegalArgumentException.class)
+	public void regexTest() {
+		parser.addOption(new Option("a#", Type.STRING), "o");
+		assert(parser.optionExists("a#"));
+	}
+}

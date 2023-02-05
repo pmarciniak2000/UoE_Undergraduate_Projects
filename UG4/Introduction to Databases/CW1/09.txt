@@ -1,0 +1,1 @@
+<R>[Artist->Name](<P>[Artist](<R>[Name->Artist](Artists))<D><P>[Artist](<S>[Artist=A & A=A2 & Type='STUDIO' & T2='STUDIO'& (Y<Year & Y2<Year)](<P>[A,Y,T2](<R>[Artist->A,Year->Y,Type->T2](Albums))<X>(<P>[Artist,Year,Type](Albums))<X>(<P>[A2,Y2,T3](<R>[Artist->A2,Year->Y2,Type->T3](Albums))))))

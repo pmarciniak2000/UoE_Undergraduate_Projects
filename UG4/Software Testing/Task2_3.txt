@@ -1,0 +1,6 @@
+Criteria:
+	- Cut tests which overlap with one another and only keep one of them.
+	- Keep tests that cover many branches and that have high coverage on their own.
+	- Unless very important to functionality remove tests designed to test very specific branches
+	- Try make sure each method is covered by a test at least once
+Making sure that every method is covered at least once allows the test suite to have high coverage and because it largely relies on removing duplicate tests and tests for very specific branches, which do not add much coverage on their own we can cut down the number of tests significantly. 

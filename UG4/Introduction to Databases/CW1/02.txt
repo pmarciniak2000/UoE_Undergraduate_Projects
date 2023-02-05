@@ -1,0 +1,1 @@
+<P>[Name,Country](<S>[Type='COMPILATION' & Year<2000 & 1989<Year](<P>[Name,Country,Year,Type](<S>[Artist=Name](Albums<X>(<R>[Type->Type1](Artists))))))

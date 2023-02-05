@@ -1,0 +1,1 @@
+select cast(o.ordid as int), cast(o.odate as date), cast(max(p.ptype) as varchar) as ProductType from orders o join details d on o.ordid=d.ordid join products p on d.pcode = p.pcode group by o.ordid having max(p.ptype)=min(p.ptype) order by o.ordid;

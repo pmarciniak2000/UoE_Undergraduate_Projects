@@ -1,0 +1,12 @@
+- A branch in the switch statement in the getInteger method cannot be covered, specifically the one which leads to the default value being set to 0. This means that we cannot cover that specific instruction at all. This is because the only way to reach this would be to add an option of type NOTYPE, but this throws an error when we try storing this option thus making it impossible to call the getInteger method on this option to reach the aforementioned branch.
+
+- Inside the parse method the line: if(entrySplit.length > 1 && !entrySplit[1].isBlank()) { has a branch that cannot be covered as entrySplit.length will at minimum be 2 even if we try parse an empty string hence we can never cover the branch that fails the first condition.
+
+- setValueWithOptionName and setValueWithOptionShortcut both have a branch that is not reached since if (option != null) { will never be null as we cannot have a null shortcut or null option name.
+
+- The equals method in the Option class also has a branch that cannot be reached as the part getClass() != obj.getClass() will never be true, as this method is strictly used to compare Option objects which are of the same class
+
+- The following lines have branches where the if statements fail that were not reached:
+	if (optionMap.optionExists(varNameNoDash)) { 
+	if (optionMap.shortcutExists(varNameNoDash)) { 
+These were not covered as if a name/shortcut doesn’t exist we will receive an RuntimeException because the option name or shortcut is not defined.
