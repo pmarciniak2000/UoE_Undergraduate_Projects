@@ -43,7 +43,7 @@ All the courseworks for this course required implementing features in a mock-up 
 
 CW1 - Implement a real-time clock by looking into the CMOS register
 
-CW2 _ Implement a round robin and FIFO process scheduling algorithm
+CW2 - Implement a round robin and FIFO process scheduling algorithm
 
 CW3 - Implement a physical memory allocator baded on the buddy allocation algorithm
 
@@ -98,6 +98,8 @@ CW4 - Writing a technical specification for an on-chain implementation of the GO
 Group project requiring desinging an app to interface witha Respeck motion sensor and then use machine learning algorithms for Human Activity Recogintion.
 
 **Advanced Database Systems**
+
+Minibase database implementations
 
 **Computer Graphics**
 
