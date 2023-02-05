@@ -9,11 +9,15 @@ This course required implementing a bicycle rental system in Java. The system he
 
 **Reasoning and Agents**
 
-Planning Coursework
+Create a planner using the Planning Domain Definition Language(PDDL)
 
 **Introduction to Algorithms and Data Structures**
 
-Travelling Salesman Problem
+Trialling different heuristics for the travelling salesman problem.
+Swap Heuristic - Repeatedly swap order in which adjacent cities visited, if this lowers the cost we keep the order 
+2-Opt - Reverse order of a continguous sequence of cities and see if it reduces costs
+Greedy - At each point find the next nearest point and hope that it leads to a globally optimal solution
+Nearest Insertion - A more advanced form of the greedy search which finds the nearest destination from a sub-tour of cities
 
 ## UG3:
 
@@ -27,7 +31,7 @@ Introductory course to machine learning that required using various different ma
 
 **Computer Security**
 
-CW2 - MITM
+CW2 - Performing a man in the middle (MitM attack) oto intercept a chat between Alice and Bob. The attack files are found in eve.py.
 
 CW3 - Writting bash scripts that would perform buffer overflow attacks on provided programs with existing vulnerabilities. If the attack was successful as secret would be printed out to the console.
 
@@ -35,11 +39,15 @@ Note: CW1 was formative and was self contained in wireshark
 
 **Operating Systems**
 
-CW1
+All the courseworks for this course required implementing features in a mock-up operating system designed by one of the lecturers of the course. The os was InfOS and can be found at https://github.com/tspink/infos
 
-CW2
+CW1 - Implement a real-time clock by looking into the CMOS register
 
-CW3
+CW2 _ Implement a round robin and FIFO process scheduling algorithm
+
+CW3 - Implement a physical memory allocator baded on the buddy allocation algorithm
+
+CW4 - Implement a file-system driver that can handle TAR files
 
 **Systems Design Project**
 
@@ -55,17 +63,21 @@ CW2 - SQL queries
 
 **Computer Communication and Networks**
 
-CW1
+CW1 - Analysing network traffic with python by looking into data packets
 
-CW1
+CW2 - Creating of 4 sender/receiver UDP packet transfer programs of increasing complexity
+      Part1: Basic transfer of large file under ideal conditions
+      Part2: Implement a Stop-and-Wair procedure using an ACK message
+      Part3: Implement a Go-Back-N that could handle window sizes greater than 1
+      Part4: Selective Repeat procedure that will allow and lost packets to be easily retransmitted without having to send the whole message again
 
-CW1
+CW3 - Applying openflow to aid in packet analysis
 
 **Foundations of Natural Language Processing**
 
-CW1
+CW1 - NLP text preprocessing, feature extraction and POS tag prediction
 
-CW2
+CW2 - Training of a Hidden Markoc Model and implementing the Viterbi Algorithm
 
 **Software Testing**
 
@@ -75,13 +87,11 @@ The coursework for this project required writing tests to find hidden bugs in a 
 
 **Blockchains and Distributed Ledgers**
 
-CW1
+CW2 - Contract that allows two players to roll a dice. A commit-reveal scheme was adopted for secure number randomisation.
 
-CW2
+CW3 - Contract to represent a custom token, with options to let the contract owner mint tokens to addresses and allow users to sell and transfer any tokens they own.
 
-CW3
-
-CW4
+CW4 - Writing a technical specification for an on-chain implementation of the GO game. There is no programming involved in this coursework as the task was to write a specification so that another person could use it to actually implement the game in Solidity.
 
 **Principles and Design of IoT Systems**
 
@@ -97,11 +107,11 @@ CW2
 
 **Text Technologies for Data Science**
 
-CW1
+CW1 - Individual search engine project that could perform simple boolean queries.
 
-CW2
+CW2 - IR evaluation of systems and web search.
 
-CW3
+CW3 - Group search engine project.
 
 
 
