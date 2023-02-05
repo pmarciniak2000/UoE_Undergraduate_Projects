@@ -91,7 +91,7 @@ Group project requiring desinging an app to interface witha Respeck motion senso
 
 **Computer Graphics**
 
-CW1
+CW1 - The task was to add synthetic objects with shadows/reflections into a picture we had taken. The picture had to include a brush. This was done by recreating a proxy of the picture we had taken in blender and then adding synthetic objects to the blender scene. We then had to render the scene with PBRT and composite the rendered image with the original one using GIMP to try and create a realistic looking image with our synthetically generated objects.
 
 CW2
 
