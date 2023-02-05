@@ -1,0 +1,37 @@
+/home/ubuntu/OS/infos-coursework/infos/oot/buddy.o: \
+ /home/ubuntu/OS/infos-coursework/infos/oot/buddy.cpp \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/mm/page-allocator.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/mm/allocator.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/define.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/assert.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/log.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/lock.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/arch/x86/irq.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/irq.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/mm/mm.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/subsystem.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/mm/object-allocator.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/kernel.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/om.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/object.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/map.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/list.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/support.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/device-manager.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/drivers/device.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/string.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/generator.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/module.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/sched.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/sched-entity.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/time.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/ratio.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/event.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/wakequeue.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/kernel/syscall.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/fs/vfs.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/fs/vfs-node.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/fs/fs-node.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/cmdline.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/math.h \
+ /home/ubuntu/OS/infos-coursework/infos/include/infos/util/printf.h
