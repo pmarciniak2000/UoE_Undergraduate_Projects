@@ -27,9 +27,9 @@ Introductory course to machine learning that required using various different ma
 
 **Computer Security**
 
-CW2
+CW2 - MITM
 
-CW3
+CW3 - Writting bash scripts that would perform buffer overflow attacks on provided programs with existing vulnerabilities. If the attack was successful as secret would be printed out to the console.
 
 Note: CW1 was formative and was self contained in wireshark
 
