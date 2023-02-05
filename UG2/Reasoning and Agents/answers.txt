@@ -1,0 +1,113 @@
+﻿Reasoning and Agents CW2 - s1828233
+Part 1
+ 
+1.1 Describing the world state
+
+
+Predicates: 
+
+
+-isConnectedWith(x,y,m), which means location ‘x’ is connected to location ‘y’ by method m(i.e. By Road,Air). This means there is only a route from x to y, so if there is a route from y to x we must also write isConnectedWith(y,x,m).
+
+
+-Location(l) which is true iff x is a location
+
+
+-At(x,l) which is true iff ‘x’ is at location ‘l’. 
+
+
+-Visited(x,l) is true iff agent ‘x’ has already visited location ‘l’
+
+
+-Car(x) is true iff x is a car
+
+
+-Agent(x) is true iff x is an agent
+
+
+-Method(x) is true iff the x is the a method of transport(Road or Air)
+
+
+Let Car be a constant of type car: Car(Car)
+Let Agent be a constant of type agent: Agent(Agent)
+
+
+Initial state:
+
+
+- Location(A) and Location(B) and Location(C) and Location(D) and Location(E) and Location(F) and Location(G) and Location(H) and Location(I) and 
+isConnectedWith(E,A,Road) and isConnectedWith(A,E,Road)  and isConnectedWith(A,I,Road) and isConnectedWith(I,A,Road) and isConnectedWith(I,H,Road) and isConnectedWith(H,I,Road) and isConnectedWith(H,B,Road) and isConnectedWith(B,H,Road) and isConnectedWith(H,G,Road) and isConnectedWith(G,H,Road) and isConnectedWith(G,F,Road) and isConnectedWith(F,G,Road) and isConnectedWith(F,D,Road) and isConnectedWith(D,F,Road) and isConnectedWith(D,C,Road) and isConnectedWith(C,D,Road) and isConnectedWith(F,C,Road) and isConnectedWith(C,F,Road) 
+and isConnectedWith(A,B,Air) and isConnectedWith(B,A,Air) and isConnectedWith(A,C,Air) and isConnectedWith(C,B,Air) and at(Car,E) and at(Agent,E)
+
+
+Goal state:
+-visited(Agent,D) and At(Agent,E)
+1.2 Actions
+
+
+-Action(Drive(from,to,method))
+        PRECOND: At(Car,from) and At(Agent,from) and isConnectedWith(from,to,method) 
+        EFFECT: At(Agent,to) and At(Car,to) and not At(Agent,from) and not At(Car,from)
+
+
+-Action(Fly(from,to,method))
+        PRECOND: At(Agent,from) and isConnectedWith(from,to,method)
+EFFECT:At(Agent,to) and not At(Agent,from)
+
+
+-Action(Visit(location))
+        PRECOND: At(Agent,location) and not visited(Agent,location)
+        EFFECT: visited(Agent,location)
+
+
+
+
+1.3 Backwards state space search
+
+
+Initial state: At(Agent, E) and At (Car, E)  
+Note: we do not include false predicates in the initial state like not(Visited(B))
+Goal state: Visited(B)
+
+
+1. Current state: Visited(B)
+Available actions: Visit(B) //From this step this is the only action that is relevant since only it can satisfy the preconditions and be executed.
+Choose: Visit(B)
+    
+2. Updated current state: At(Agent, B) and not(Visited(B))
+Available actions: Fly(A,B, Air), Drive(H,B,Road) //need car at E so choose drive
+Choose: Drive(H,B,Road)
+
+
+3. Updated current state: At(Agent, H) and At(Car, H) and not At(Agent, B) and not(Visited(B))
+Available actions: Drive(I,H ,Road), Drive(G,H, Road)
+Choose: Drive(I,H,Road)
+
+
+4. Updated current state: At(Agent, I) and At(Car, I) and not At(Agent, H) and not(Visited(B))
+Available actions: Drive(A,I)
+Choose: Drive(A,I,Road)
+
+
+5.Updated current state: At(Agent, A) and At(Car, A) and not At(Agent,H) and not(Visited(B))
+Available actions: Drive(E, A, Road), Fly(B, A, Air)
+Choose: Drive(E,A, Road)
+
+
+6.Updated current state: At(Agent, E) and At(Car, E) and not At(Agent, A) and not Visited(B))
+Initial state reached. 
+
+
+Final plan: 
+1.Drive(E,A,Road)
+2.Drive(A,I,Road)
+3.Drive(I,H,Road)
+4.Drive(H,B,Road)
+5.Visit(B)
+
+
+Part 4
+
+
+Implementing travellers preferences in PDDL would require a lot of functions which measure things like, ease of journey, length of journey,etc. But even then it would be difficult to produce an optimal plan, because PDDL will prioritise plan length and will not take into consideration the degree to which something may matter to a traveller.
+More broadly, we could use contingency planning to plan for different situations depending on what the travellers preferences may be and to what degree they matter. If none of the possible plans satisfy the travellers criteria, there may be a need to re-plan.
