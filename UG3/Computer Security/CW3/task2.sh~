@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+/task2/template/vuln "$(python -c "print('Frodo Baggins')")"

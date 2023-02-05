@@ -1,0 +1,11 @@
+GPG EXERCISE:
+
+gpg --gen-key
+gpg --send-keys <Key ID>
+gpg --recv-keys 96CB 3DC2 AFCA 575F EA2A AB3F 000B 2EDC 21F6 F23D
+gpg -d <filename>
+gpg -e <filename>
+
+SPOOF EMAIL:
+mailx -r "darth.vader@starwars.com" -s "s1828233" cw-2@ed.ac.uk
+
