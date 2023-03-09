@@ -3,7 +3,7 @@ A collection of some of the projects I completed in my time studying at the Univ
 
 ## UG2:
 
-**Software Engineering**
+- **Software Engineering**
 
 This course required implementing a bicycle rental system in Java. The system helps customers to rent the cheapest bicycles and find the nearest bike company to them. The system provides functions such as calculating the rental price, calculating the distance between the customer and the rental company, providing rental renewals, and providing reviews of rental companies.
 
@@ -37,7 +37,7 @@ This course required implementing a drone that would fly over a geojson stored m
 
 Introductory course to machine learning that required using various different machine learning algorithms.
 
-### Overall Coursework Grade: 78% (A1)
+### Overall Coursework Grade: 78% (A3)
 
 **Computer Security**
 
