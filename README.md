@@ -7,13 +7,13 @@ A collection of some of the projects I completed in my time studying at the Univ
 
 This course required implementing a bicycle rental system in Java. The system helps customers to rent the cheapest bicycles and find the nearest bike company to them. The system provides functions such as calculating the rental price, calculating the distance between the customer and the rental company, providing rental renewals, and providing reviews of rental companies.
 
-#Coursework Grade: 79% (A3)
+# Coursework Grade: 79% (A3)
 
 **Reasoning and Agents**
 
 Create a planner using the Planning Domain Definition Language(PDDL)
 
-#Coursework Grade: 77% (A3)
+# Coursework Grade: 77% (A3)
 
 **Introduction to Algorithms and Data Structures**
 
@@ -23,7 +23,7 @@ Swap Heuristic - Repeatedly swap order in which adjacent cities visited, if this
 Greedy - At each point find the next nearest point and hope that it leads to a globally optimal solution
 Nearest Insertion - A more advanced form of the greedy search which finds the nearest destination from a sub-tour of cities
 
-#Coursework Grade: 74% (A3)
+# Coursework Grade: 74% (A3)
 
 ## UG3:
 
@@ -31,13 +31,13 @@ Nearest Insertion - A more advanced form of the greedy search which finds the ne
 
 This course required implementing a drone that would fly over a geojson stored map and collect items in a specified positions. The drone algorithm had to be optimised such that it would use as little fuel as possible whilst navigating obstacles such as buildings, i.e. no-fly zones.
 
-#Coursework Grade: 78% (A3)
+# Coursework Grade: 78% (A3)
 
 **Introductory Applied Machine Learning**
 
 Introductory course to machine learning that required using various different machine learning algorithms.
 
-#Overall Coursework Grade: 78% (A1)
+# Overall Coursework Grade: 78% (A1)
 
 **Computer Security**
 
@@ -47,7 +47,7 @@ CW3 - Writting bash scripts that would perform buffer overflow attacks on provid
 
 Note: CW1 was formative and was self contained in wireshark
 
-#Overall Coursework Grade: 100% (A1)
+# Overall Coursework Grade: 100% (A1)
 
 **Operating Systems**
 
@@ -67,7 +67,7 @@ CW4 - Implement a file-system driver that can handle TAR files
 
 Group project with the aim of designing an assistive robot. My team created a fuel pump robot in Webots and designed a Java Android Application to control the robot.
 
-#Coursework Grade: 69% (B)
+# Coursework Grade: 69% (B)
 
 ## UG4:
 
@@ -77,7 +77,7 @@ CW1 - Relational algebra queries
 
 CW2 - SQL queries
 
-#Overall Coursework Grade: 82% (A2)
+# Overall Coursework Grade: 82% (A2)
 
 **Computer Communication and Networks**
 
@@ -91,7 +91,7 @@ CW2 - Creating of 4 sender/receiver UDP packet transfer programs of increasing c
 
 CW3 - Applying openflow to aid in packet analysis
 
-#Overall Coursework Grade: 93% (A1)
+# Overall Coursework Grade: 93% (A1)
 
 **Foundations of Natural Language Processing**
 
@@ -99,13 +99,13 @@ CW1 - NLP text preprocessing, feature extraction and POS tag prediction
 
 CW2 - Training of a Hidden Markoc Model and implementing the Viterbi Algorithm
 
-#Overall Coursework Grade: 81% (A2)
+# Overall Coursework Grade: 81% (A2)
 
 **Software Testing**
 
 The coursework for this project required writing tests to find hidden bugs in a compiled jar file. We then had to implement additional features into the codebase and write tests for the additional functionality.
 
-#Coursework Grade: 98% (A1)
+# Coursework Grade: 98% (A1)
 
 ### CODE FOR THIS YEAR'S PROJECTS WILL ONLY BE PUBLISHED AFTER DEADLINES HAVE PASSED DUE TO UNIVERSITY POLICY
 
