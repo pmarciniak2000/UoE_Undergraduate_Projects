@@ -1,5 +1,5 @@
 ### UoE_Undergraduate_Projects
-A collection of some of the projects I completed in my time studying at the University Of Edinburgh (2018-2023)
+A collection of the projects I completed in my time studying at the University Of Edinburgh (2018-2023)
 
 # UG2:
 
