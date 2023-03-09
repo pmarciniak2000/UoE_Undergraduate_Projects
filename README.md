@@ -83,7 +83,9 @@ CW2 - Training of a Hidden Markoc Model and implementing the Viterbi Algorithm
 
 The coursework for this project required writing tests to find hidden bugs in a compiled jar file. We then had to implement additional features into the codebase and write tests for the additional functionality.
 
-## UG5:
+### CODE FOR THIS YEAR'S PROJECTS WILL ONLY BE PUBLISHED AFTER DEADLINES HAVE PASSED DUE TO UNIVERSITY POLICY
+
+## UG5: 
 
 **Blockchains and Distributed Ledgers**
 
