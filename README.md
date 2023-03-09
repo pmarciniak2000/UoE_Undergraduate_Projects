@@ -9,6 +9,8 @@ This course required implementing a bicycle rental system in Java. The system he
 
 ### Coursework Grade: 79% (A3)
 
+---
+
 ## **Reasoning and Agents**
 
 Create a planner using the Planning Domain Definition Language(PDDL)
